@@ -2,7 +2,7 @@
 
 <div>
 	<b>Researched by: <a href="https://github.com/SuperSaiyajinStackZ">SuperSaiyajinStackZ</a>.</b><br>
-	<b>Version: v0.1</b><br>
+	<b>Version: v0.2</b><br>
 	<b><a href="https://github.com/SuperSaiyajinStackZ/Sims2Research/blob/main/Structures/NDS/Painting.cpp">Link to the C++ Structure</a></b><br>
 </div>
 
@@ -138,6 +138,28 @@ uint32_t GetPixelPos(uint8_t *PaintingBuffer, const uint8_t X, const uint8_t Y) 
 };
 ```
 
+## Slot
+
+There are 3 Slots you can use in game. The first Slot is `0`, the second Slot is `1` and the third Slot is `2`.
+
+The Slot index is stored at `0xC` in the Header of the Painting.
+
+## Canvas Index
+
+There are 5 Canvas in the art gallery and 1 wherever you place your "favorite" Painting. Here are the values for each listed.
+
+| Where                              | Value |
+| ---------------------------------- | ----- |
+| Art Gallery bottom left            | 0x0   |
+| Art Gallery top left               | 0x1   |
+| Art Gallery top middle             | 0x2   |
+| Art Gallery top right              | 0x3   |
+| Art Gallery bottom right           | 0x4   |
+| Wherever your favorite Painting is | 0x5   |
+
+The index is stored at `0xD` in the Header of the Painting.
+
+
 ## Painting Checksum
 
 Of course the Painting also stores checksums, 2 to be exact.
@@ -187,5 +209,49 @@ void UpdateChecksum(uint8_t *PaintingBuffer) {
 	Calced = (256 * (uint8_t)-Byte2) + (uint8_t)-Byte1;
 	CurChks = *reinterpret_cast<uint16_t *>(PaintingBuffer + 0xE);
 	if (CurChks != Calced) *reinterpret_cast<uint16_t *>(PaintingBuffer + 0xE) = Calced;
+};
+```
+
+## Fixing corrupted Painting
+
+If you started the game with an invalid checksum on the paintings, the game formats the Header of the Painting, to make it not usable. However, there is an easy way to fix the corruption, as long as you remember a few details:
+
+* What was the Index before stored at 0x8?
+* What was the Slot the Painting was for stored at 0xC?
+* What was the Canvas index the Painting was stored at 0xD?
+
+You can detect, if the Painting got formatted, when the first 0x14 bytes look like this:
+```
+2A 2A 2A 00 00 00 00 00 E0 20 7E 02 D8 8F 00 00 00 00 00 00
+```
+
+If you know all of them, then you should be good to fix that, below there's an implementation in C++ how to fix them.
+
+```cpp
+void FixPainting(uint8_t *PaintingBuffer, const uint32_t Index, const uint8_t Slot, const uint8_t CanvasIdx) {
+	/* Fix Header Identifier 0x0 - 0x4. */
+	PaintingBuffer[0x0] = 'p'; PaintingBuffer[0x1] = 't'; PaintingBuffer[0x2] = 'g'; PaintingBuffer[0x3] = 0x0; PaintingBuffer[0x4] = 0xF;
+
+	/* TODO: Figure out what 0x5 - 0x7 is, for now have it as 0x0. */
+	for (uint8_t Idx = 0; Idx < 3; Idx++) PaintingBuffer[0x5 + Idx] = 0x0;
+
+	/* Set the Index at 0x8 - 0xB (uint32_t). */
+	*reinterpret_cast<uint32_t *>(PaintingBuffer + 0x8) = Index;
+
+	/* Set the Slot at 0xC. */
+	PaintingBuffer[0xC] = Slot;
+
+	/* Set the Canvas Index at 0xD. */
+	PaintingBuffer[0xD] = CanvasIdx;
+
+	/* Checksum needs to be calculated (0xE - 0xF AND 0x10 - 0x11) with the method "UpdateChecksum" above.. but at the end! */
+
+	/* TODO: Figure out what 0x12 - 0x13 is, for now have it as 0x0. */
+	for (uint8_t Idx = 0; Idx < 2; Idx++) PaintingBuffer[0x12 + Idx] = 0x0;
+
+	/*
+		NOW: Update the main checksum (0x10 - 0x11) first with the method "UpdateChecksum", then the Header with 0xE - 0xF.
+		The method above handles both properly into one.
+	*/
 };
 ```
