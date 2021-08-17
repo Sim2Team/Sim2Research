@@ -1,7 +1,7 @@
 # The Sims 2 Game Boy Advance | Item Package Research
 
 <div>
-	<b>Researched by: <a href="https://github.com/SuperSaiyajinStackZ>SuperSaiyajinStackZ"</a>.</b><br>
+	<b>Researched by: <a href="https://github.com/SuperSaiyajinStackZ>SuperSaiyajinStackZ">SuperSaiyajinStackZ</a>.</b><br>
 	<b>Version: v0.1</b><br>
 	<b><a href="https://github.com/SuperSaiyajinStackZ/Sims2Research/blob/main/Structures/GBA/ItemPackage.cpp">Link to the C++ Structure</a></b><br>
 </div>
