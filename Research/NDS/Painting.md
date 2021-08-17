@@ -10,15 +10,16 @@
 ## Some notes
 
 * The first 5 bytes are always: `0x70, 0x74, 0x67, 0x0, 0xF` it seems.
-* The Paintings start at 0x5000 of the Savefile.
-* The Paintings have a size of 0x400.
-* There are 20 Paintings in the Savefile, so the range is: 0x5000 - 0x9FFF.
+* The Paintings start at `0x5000` of the Savefile.
+* The Paintings have a size of `0x400`.
+* There are 20 Paintings in the Savefile, so the range is: `0x5000 - 0x9FFF`.
 * A Painting image is 48x32 pixels large.
 * A byte contains a left and right pixel, so the first 4 bits is the left pixel, the second 4 bits the right pixel.
 * There are 16 Palettes with 15 colors per palette.
 * A pixel contains the index of the color from the specified palette.
 * The first color of the palette in the pixel data starts at 1, so in case of an array which starts at 0, you have to do - 1.
-* A Painting stores 2 checksums, one stored at 0xE - 0xF (Header) and one stored at 0x10 - 0x11 (Main).
+* A Painting stores 2 checksums, one stored at `0xE - 0xF` (Header) and one stored at `0x10 - 0x11` (Main).
+
 
 
 ## Rankname
@@ -61,9 +62,11 @@ std::string GetRank(const uint8_t Flag) {
 };
 ```
 
+
+
 ## ImageData Pixels
 
-The image data start at byte 0x14 and go up to 0x313.
+The image data start at byte `0x14` and go up to `0x313`.
 
 One byte contains a left and a right pixel, while the first 4 bits are the left pixel and the second 4 bits are the right pixel.
 
@@ -138,11 +141,15 @@ uint32_t GetPixelPos(uint8_t *PaintingBuffer, const uint8_t X, const uint8_t Y) 
 };
 ```
 
+
+
 ## Slot
 
 There are 3 Slots you can use in game. The first Slot is `0`, the second Slot is `1` and the third Slot is `2`.
 
 The Slot index is stored at `0xC` in the Header of the Painting.
+
+
 
 ## Canvas Index
 
@@ -160,11 +167,12 @@ There are 5 Canvas in the art gallery and 1 wherever you place your "favorite" P
 The index is stored at `0xD` in the Header of the Painting.
 
 
+
 ## Painting Checksum
 
 Of course the Painting also stores checksums, 2 to be exact.
 
-There are 2 checksums, one stored at 0xE - 0xF (The Header) and one at 0x10 - 0x11 (The Main).
+There are 2 checksums, one stored at `0xE - 0xF` (The Header) and one at `0x10 - 0x11` (The Main).
 
 Below you can find a C++ way to fix both Checksums, if they are invalid.
 
@@ -212,13 +220,15 @@ void UpdateChecksum(uint8_t *PaintingBuffer) {
 };
 ```
 
+
+
 ## Fixing corrupted Painting
 
 If you started the game with an invalid checksum on the paintings, the game formats the Header of the Painting, to make it not usable. However, there is an easy way to fix the corruption, as long as you remember a few details:
 
-* What was the Index before stored at 0x8?
-* What was the Slot the Painting was for stored at 0xC?
-* What was the Canvas index the Painting was stored at 0xD?
+* What was the Index before stored at `0x8`?
+* What was the Slot the Painting was for stored at `0xC`?
+* What was the Canvas index the Painting was stored at `0xD`?
 
 You can detect, if the Painting got formatted, when the first 0x14 bytes look like this:
 ```

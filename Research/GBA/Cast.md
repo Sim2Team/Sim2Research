@@ -6,12 +6,13 @@
 	<b><a href="https://github.com/SuperSaiyajinStackZ/Sims2Research/blob/main/Structures/GBA/Cast.cpp">Link to the C++ Structure</a></b><br>
 </div>
 
+
 ## Some notes
 
 * There are 26 Cast Members in game.
-* The first Cast Member starts at 0x466 of the slot.
-* The size of the Cast Member Structure is: 0xA (10) bytes.
-* The full size for the Cast Member section is: 0x104 bytes ( 26 * 0xA ).
+* The first Cast Member starts at `0x466` of the slot.
+* The size of the Cast Member Structure is: `0xA` (10) bytes.
+* The full size for the Cast Member section is: `0x104` bytes ( 26 * 0xA ).
 
 * NOTE: The final Offset varies with the amount of items you have in your house, see below for how to get the proper final Offset.
 
@@ -21,7 +22,7 @@
 
 The Cast Member final offset depends on how many items you have in your House.
 
-The amount of items you have in your house is stored at byte 0xD6 of the SavSlot's Data.
+The amount of items you have in your house is stored at byte `0xD6` of the SavSlot's Data.
 
 See below for a way how to get the final offset.
 
