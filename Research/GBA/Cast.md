@@ -2,7 +2,7 @@
 
 <div>
 	<b>Researched by: <a href="https://github.com/SuperSaiyajinStackZ">SuperSaiyajinStackZ</a>.</b><br>
-	<b>Version: v0.1</b><br>
+	<b>Version: v0.2</b><br>
 	<b><a href="https://github.com/SuperSaiyajinStackZ/Sims2Research/blob/main/Structures/GBA/Cast.cpp">Link to the C++ Structure</a></b><br>
 </div>
 
@@ -100,7 +100,7 @@ Yes, Cast Members also have feelings, lol. The feelings can be seen, if you do o
 * You take an interaction with them. You will see their feeling from their Picture.
 * You look into the Cast Member List. You will see their feeling from their Picture.
 
-I haven't discovered yet how long the feeling will exactly last until it changes back to neutral, but it might be possible that it's 24 Hours or something. That'd be a TODO for my research about the Cast Members. Maybe it's even stored inside the Cast Member Structure.
+After you give a Cast Member a gift that they may like or hate, it sets byte `0x6` to `0x18` (24), that are the hours the effect will last until it changes back to Neutral. Every full hour, that value will decrease for `0x1`.
 
 The feeling is stored at byte `0x4` in the structure of the Cast Members.
 
