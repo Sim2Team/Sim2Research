@@ -21,18 +21,18 @@
 	The basic structure of the Painting.
 */
 struct Painting {
-	uint8_t Header[0x5] = { 0x70, 0x74, 0x67, 0x0, 0xF }; // "Painting" Header. 0x0 - 0x4.
-	uint8_t Unknown1[0x3] = { 0x0 }; // Unknown. Maybe it's for the Header "Painting" as well? 0x5 - 0x7.
-	uint32_t PaintingIndex = 0x0; // Index of the Painting. 0x8 - 0xB.
-	uint8_t Slot = 0x0; // The slot the painting is being part of. 0xC.
-	uint8_t CanvasIndex = 0x0; // The index of the canvas in the art gallery ( 0 - 4 ) or favorite Painting ( 5 ). 0xD.
-	uint16_t HeaderChecksum = 0x0; // Checksum of the Header. 0xE - 0xF.
-	uint16_t MainChecksum = 0x0; // Checksum of the "Main". 0x10 - 0x11.
-	uint8_t Unknown2[0x2] = { 0x0 }; // Unknown. 0x12 - 0x13.
-	uint8_t PaintingData[0x300] = { 0x0 }; // Painting Image Data. 0x14 - 0x313.
-	uint8_t Flag = 0x0; // Flag of the Painting. 0x314.
-	uint8_t Palette = 0x0; // The Palette Index. 0x315.
-	uint8_t Unknown3[0xEA] = { 0x0 }; // Unknown. 0x316 - 0x3FF.
+	uint8_t Header[0x5] = { 0x70, 0x74, 0x67, 0x0, 0xF }; // "Painting" Header; 0x0 - 0x4.
+	uint8_t Unknown1[0x3] = { 0x0 }; // Unknown. Maybe it's for the Header "Painting" as well?; 0x5 - 0x7.
+	uint32_t PaintingIndex = 0x0; // Index of the Painting; 0x8 - 0xB.
+	uint8_t Slot = 0x0; // The slot the painting is being part of; 0xC.
+	uint8_t CanvasIndex = 0x0; // The index of the canvas in the art gallery ( 0 - 4 ) or favorite Painting ( 5 ); 0xD.
+	uint16_t HeaderChecksum = 0x0; // Checksum of the Header; 0xE - 0xF.
+	uint16_t MainChecksum = 0x0; // Checksum of the "Main"; 0x10 - 0x11.
+	uint8_t Unknown2[0x2] = { 0x0 }; // Unknown; 0x12 - 0x13.
+	uint8_t PaintingData[0x300] = { 0x0 }; // Painting Image Data; 0x14 - 0x313.
+	uint8_t Flag = 0x0; // Flag of the Painting; 0x314.
+	uint8_t Palette = 0x0; // The Palette Index; 0x315.
+	uint8_t Unknown3[0xEA] = { 0x0 }; // Unknown; 0x316 - 0x3FF.
 };
 
 
