@@ -1,9 +1,35 @@
 /*
+*   This file is part of Sim2Research
+*   Copyright (C) 2021 SuperSaiyajinStackZ
+*
+*   This program is free software: you can redistribute it and/or modify
+*   it under the terms of the GNU General Public License as published by
+*   the Free Software Foundation, either version 3 of the License, or
+*   (at your option) any later version.
+*
+*   This program is distributed in the hope that it will be useful,
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*   GNU General Public License for more details.
+*
+*   You should have received a copy of the GNU General Public License
+*   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*
+*   Additional Terms 7.b and 7.c of GPLv3 apply to this file:
+*       * Requiring preservation of specified reasonable legal notices or
+*         author attributions in that material or in the Appropriate Legal
+*         Notices displayed by works containing it.
+*       * Prohibiting misrepresentation of the origin of that material,
+*         or requiring that modified versions of such material be marked in
+*         reasonable ways as different from the original version.
+*/
+
+/*
 	----------------------------------------------
 	The Sims 2 Game Boy Advance Savefile Tools
 	----------------------------------------------
 
-	File: ChecksumRehash.cpp
+	File: Sim2ChecksumRehash.cpp
 	Authors: SuperSaiyajinStackZ
 	Version: 0.1
 	Purpose: A C++ Tool that updates / rehashes invalid Checksums from a The Sims 2 Game Boy Advance Savefile.
@@ -288,7 +314,7 @@ void ChecksumRehash::UpdateAll(const bool AllowWritingToFile) {
 
 
 int main(int ARGC, char *ARGV[]) {
-	PrintMessage("The Sims 2 Game Boy Advance ChecksumRehash by SuperSaiyajinStackZ.\n");
+	PrintMessage("The Sims 2 Game Boy Advance Sim2ChecksumRehash by SuperSaiyajinStackZ.\n");
 
 	if (ARGC > 1) { // Ensure it's larger as 1, so it contains the passed path.
 		std::unique_ptr<ChecksumRehash> CR = std::make_unique<ChecksumRehash>(ARGV[1]);

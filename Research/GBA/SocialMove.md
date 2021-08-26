@@ -3,7 +3,7 @@
 <div>
 	<b>Researched by: <a href="https://github.com/SuperSaiyajinStackZ">SuperSaiyajinStackZ</a>.</b><br>
 	<b>Version: v0.1</b><br>
-	<b><a href="https://github.com/SuperSaiyajinStackZ/Sims2Research/blob/main/Structures/GBA/SocialMove.cpp">Link to the C++ Structure</a></b><br>
+	<b><a href="https://github.com/SuperSaiyajinStackZ/Sim2Research/blob/main/Structures/GBA/SocialMove.cpp">Link to the C++ Structure</a></b><br>
 </div>
 
 

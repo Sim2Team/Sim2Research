@@ -1,5 +1,5 @@
 /*
-*   This file is part of Sims2Research
+*   This file is part of Sim2Research
 *   Copyright (C) 2021 SuperSaiyajinStackZ
 *
 *   This program is free software: you can redistribute it and/or modify
