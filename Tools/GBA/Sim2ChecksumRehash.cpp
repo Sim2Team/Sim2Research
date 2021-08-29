@@ -1,6 +1,6 @@
 /*
 *   This file is part of Sim2Research
-*   Copyright (C) 2021 SuperSaiyajinStackZ
+*   Copyright (C) 2021 SuperSaiyajinStackZ, Sim2Team
 *
 *   This program is free software: you can redistribute it and/or modify
 *   it under the terms of the GNU General Public License as published by
@@ -314,7 +314,7 @@ void ChecksumRehash::UpdateAll(const bool AllowWritingToFile) {
 
 
 int main(int ARGC, char *ARGV[]) {
-	PrintMessage("The Sims 2 Game Boy Advance Sim2ChecksumRehash by SuperSaiyajinStackZ.\n");
+	PrintMessage("The Sims 2 Game Boy Advance Sim2ChecksumRehash by SuperSaiyajinStackZ and Sim2Team.\n");
 
 	if (ARGC > 1) { // Ensure it's larger as 1, so it contains the passed path.
 		std::unique_ptr<ChecksumRehash> CR = std::make_unique<ChecksumRehash>(ARGV[1]);

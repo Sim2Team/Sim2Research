@@ -1,9 +1,9 @@
 # The Sims 2 Game Boy Advance | House Item Research
 
 <div>
-	<b>Researched by: <a href="https://github.com/SuperSaiyajinStackZ">SuperSaiyajinStackZ</a>.</b><br>
+	<b>Researched by: <a href="https://github.com/SuperSaiyajinStackZ">SuperSaiyajinStackZ</a>, <a href="https://github.com/Sim2Team">Sim2Team</a>.</b><br>
 	<b>Version: v0.1</b><br>
-	<b><a href="https://github.com/SuperSaiyajinStackZ/Sim2Research/blob/main/Structures/GBA/HouseItem.cpp">Link to the C++ Structure</a></b><br>
+	<b><a href="https://github.com/Sim2Team/Sim2Research/blob/main/Structures/GBA/HouseItem.cpp">Link to the C++ Structure</a></b><br>
 </div>
 
 
@@ -25,13 +25,13 @@
 
 ## Item IDs
 
-You can find a list of all Item IDs <a href="https://github.com/SuperSaiyajinStackZ/Sim2Research/blob/main/Research/GBA/Item.md#item-id-list">here.</a>
+You can find a list of all Item IDs <a href="https://github.com/Sim2Team/Sim2Research/blob/main/Research/GBA/Item.md#item-id-list">here.</a>
 
 
 
 ## Item Flags
 
-You can find a list of all Item flags <a href="https://github.com/SuperSaiyajinStackZ/Sim2Research/blob/main/Research/GBA/Item.md#item-flags">here.</a>
+You can find a list of all Item flags <a href="https://github.com/Sim2Team/Sim2Research/blob/main/Research/GBA/Item.md#item-flags">here.</a>
 
 NOTE, that this section is a TODO.
 
@@ -39,7 +39,7 @@ NOTE, that this section is a TODO.
 
 ## Item Use Count
 
-You can find a list of all Item Use Counts <a href="https://github.com/SuperSaiyajinStackZ/Sim2Research/blob/main/Research/GBA/Item.md#item-use-count">here.</a>
+You can find a list of all Item Use Counts <a href="https://github.com/Sim2Team/Sim2Research/blob/main/Research/GBA/Item.md#item-use-count">here.</a>
 
 NOTE, that this section is a TODO.
 

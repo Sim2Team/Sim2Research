@@ -4,7 +4,7 @@
 	----------------------------------------------
 
 	File: B46P.sav
-	Authors: SuperSaiyajinStackZ
+	Authors: SuperSaiyajinStackZ, Sim2Team
 	Version: 0.2
 	Purpose: Shows the structure of the Cast Members from The Sims 2 Game Boy Advance.
 	Category: Save File Research

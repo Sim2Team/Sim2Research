@@ -1,9 +1,9 @@
 # The Sims 2 Game Boy Advance | Episode Research
 
 <div>
-	<b>Researched by: <a href="https://github.com/SuperSaiyajinStackZ">SuperSaiyajinStackZ</a>.</b><br>
+	<b>Researched by: <a href="https://github.com/SuperSaiyajinStackZ">SuperSaiyajinStackZ</a>, <a href="https://github.com/Sim2Team">Sim2Team</a>.</b><br>
 	<b>Version: v0.1</b><br>
-	<b><a href="https://github.com/SuperSaiyajinStackZ/Sim2Research/blob/main/Structures/GBA/Episode.cpp">Link to the C++ Structure</a></b><br>
+	<b><a href="https://github.com/Sim2Team/Sim2Research/blob/main/Structures/GBA/Episode.cpp">Link to the C++ Structure</a></b><br>
 </div>
 
 

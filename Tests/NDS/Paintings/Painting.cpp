@@ -1,6 +1,6 @@
 /*
 *   This file is part of Sim2Research
-*   Copyright (C) 2021 SuperSaiyajinStackZ
+*   Copyright (C) 2021 SuperSaiyajinStackZ, Sim2Team
 *
 *   This program is free software: you can redistribute it and/or modify
 *   it under the terms of the GNU General Public License as published by
@@ -356,7 +356,7 @@ void Painting::WriteBack() {
 
 
 int main(int ARGC, char *ARGV[]) {
-	printf("The Sims 2 Nintendo DS Painting Tests by SuperSaiyajinStackZ.\n\n");
+	printf("The Sims 2 Nintendo DS Painting Tests by SuperSaiyajinStackZ and Sim2Team.\n\n");
 
 	const uint32_t Index = 0xFF; // Also known as the count or so.
 	const uint8_t Slot = 0x0; // 0x0 -> 1, 0x1 -> 2, 0x2 -> 3.

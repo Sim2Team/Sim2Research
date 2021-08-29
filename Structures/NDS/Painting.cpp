@@ -4,7 +4,7 @@
 	-----------------------------------------
 
 	File: ASJP.sav
-	Authors: SuperSaiyajinStackZ
+	Authors: SuperSaiyajinStackZ, Sim2Team
 	Version: 0.2
 	Purpose: Shows the structure of the Paintings from The Sims 2 Nintendo DS.
 	Category: Save File Research

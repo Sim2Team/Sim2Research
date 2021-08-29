@@ -1,7 +1,7 @@
 # The Sims 2 Game Boy Advance | Item Research
 
 <div>
-	<b>Researched by: <a href="https://github.com/SuperSaiyajinStackZ">SuperSaiyajinStackZ</a>.</b><br>
+	<b>Researched by: <a href="https://github.com/SuperSaiyajinStackZ">SuperSaiyajinStackZ</a>, <a href="https://github.com/Sim2Team">Sim2Team</a>.</b><br>
 	<b>Version: v0.1</b><br>
 </div>
 
